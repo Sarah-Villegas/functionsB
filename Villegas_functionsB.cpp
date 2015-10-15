@@ -44,20 +44,24 @@ int main(){
     cout <<  "answer should be 96" << endl;
     feetToInches(12, tested); 
     cout <<  "answer should be 144" << endl;
+    
+    assert(fabs(computeRectangle( 7.6,9.3 ) - 70.68 ) < EPS);
+    assert(fabs(computeRectangle( 11.2, 7.2 ) - 80.64) < EPS);
+    
+    //assert(fabs(calcArea(, ) ) < EPS);
+    //assert(fabs(calcArea(, ) ) < EPS);
 
     return 0; 
 } 
 
-double feetToInches(double val)
-{
+double feetToInches(double val){
     double feet;
     const double inches = 12.0;
     feet = val * inches;
     return feet;
 }
 
-void feetToInches(double val1,  double& val2)
-{
+void feetToInches(double val1,  double& val2){
    
     const double inches = 12.0;
     double answer; 
@@ -65,38 +69,33 @@ void feetToInches(double val1,  double& val2)
     cout << answer << endl;
 }
 
-double computeRectangle(double valA, double valB)
-{
+double computeRectangle(double valA, double valB){
     int area;
     area = valA*valB;
     return area;  
 }
 
-void computerArea(double valA, double valB, double& valC)
-{
+void computerArea(double valA, double valB, double& valC){
    double height = valA;
    double width = valB;
    valC = height * width;
    
 }
 
-void computerArea(double valA, double valB, double& valArea, double& valPerimeter)
-{
+void computerArea(double valA, double valB, double& valArea, double& valPerimeter){
     valArea = valA * valB;
     valPerimeter = (2*(valA)) + (valB*2);
    
 }
 
 
-void stats(double valA, double valB, double valC, double valD, double& valE, double& valF)
-{
+void stats(double valA, double valB, double valC, double valD, double& valE, double& valF){
     valE = valA + valB + valC + valD/ 4;
     valF = valA + valB + valC + valD;
    
 }
 
-void calcAreaPerimeter(double radius, double& area, double& perimeter)
-{
+void calcAreaPerimeter(double radius, double& area, double& perimeter){
     const double PI = 3.14;
     area = (2*PI)*radius;
     perimeter = PI*(radius*radius);
@@ -104,8 +103,7 @@ void calcAreaPerimeter(double radius, double& area, double& perimeter)
 }
 
 
-double calcArea(double length, double width)
-{
+double calcArea(double length, double width){
     double area;
     area = length*width;
     return area;
