@@ -5,6 +5,7 @@
 
 #include <iostream>
 #include <cassert>
+#include <cmath>
 using namespace std; 
 
 // convert feet to inches 
@@ -34,9 +35,11 @@ int main(){
 
     double const EPS = .0001; 
 
-    assert(fabs(feetToInches(46.2) -) < EPS  );
-    assert(fabs(feetToInches(46.2) -) < EPS  );
-
+    assert(fabs(feetToInches(10.2) - 122.4) < EPS );
+    assert(fabs(feetToInches(6.8) - 81.6) < EPS  );
+    cout << "You got feet to inches to work" << endl;
+    
+    
 
     return 0; 
 } 
@@ -67,7 +70,7 @@ double computeRectangle(double valA, double valB)
 
 void computerArea(double valA, double valB, double& valC)
 {
-   double hieght = valA;
+   double height = valA;
    double width = valB;
    valC = height * width;
    
