@@ -11,7 +11,7 @@ using namespace std;
 // convert feet to inches 
 double feetToInches(double val);
 
-void ToInches(double& val);
+void feetToInches(double val1, double& val2);
 
 // calculate the area 
 double computeRectangle(double valA, double valB);
@@ -39,7 +39,11 @@ int main(){
     assert(fabs(feetToInches(6.8) - 81.6) < EPS  );
     cout << "You got feet to inches to work" << endl;
     
-    
+    double tested; 
+    feetToInches(8, tested); 
+    cout <<  "answer should be 96" << endl;
+    feetToInches(12, tested); 
+    cout <<  "answer should be 144" << endl;
 
     return 0; 
 } 
@@ -52,13 +56,13 @@ double feetToInches(double val)
     return feet;
 }
 
-void ToInches(double& val)
+void feetToInches(double val1,  double& val2)
 {
    
     const double inches = 12.0;
-    double feet = 5;
-    val = feet * inches;
-     
+    double answer; 
+    answer = val1 * inches;
+    cout << answer << endl;
 }
 
 double computeRectangle(double valA, double valB)
